@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> 
+<link rel="stylesheet" href="style.css">
+
+<title>prototipo</title>
+</head>
+<body>
+    <div class="contenedor">
+    <section class="section_nav" >
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid" id="nav-cont">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="text-nav" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="text-nav" aria-current="page" href="#">Producto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="text-nav" aria-current="page" href="#">Compras</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="text-nav" aria-current="page" href="#">Inventario</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="text-nav" aria-current="page" href="#">Ventas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="text-nav" aria-current="page" href="#">Adicionales</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </section>
+    <section class="search">
+      <form class="d-flex col-12" role="search">
+        <input class="form-control input-search me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline boton-luz1" type="submit">Search</button>
+    </form>
+  </section>
+    <section class=" sec-h1">
+        <h1>Productos</h1>
+    </section>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="container-modal ">
+        
+            <button type="button" class="btn  boton-luz" data-bs-toggle="modal" id="añadir" data-bs-target="#exampleModal">añadir producto</button>
+            <button type="button" id="descartar" class="btn btn boton-luz3 ">eliminar</button>
+
+    <form class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuestros Productos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form action="" id="producto-form" class="card-body">
+
+        <div class="container">
+             <div class="row">
+                <div class="col-4">
+                    
+                <div class="modal_title_img">
+                    <div class="modal_title">
+                        <input type="checkbox" class="check">
+                        <label>Seleccionar como principal</label>
+                    </div>
+                    <div class="modal_img col-2">
+                        <img src="img/img1.jpg" alt="img">
+                    </div>
+                    <button type="button" id="subir_img" class="btn boton-luz1">subir imagen</button>
+                </div>
+            </div>
+                <div class="col-4">
+                    <div class="titulo">
+                        <h1 class="title">Agregar producto</h1>
+                    </div>
+       
+                            <div class="modal_central">
+                                <div class="form-group mb-3">
+                                    <label for="nombre">Nombre del producto</label>
+                                    <input type="text" id="nombre" class="form-control" placeholder="camisa de rayas" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="descripcion">Descripción del producto</label>
+                                    <input type="text" id="descripcion" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="uid">UID</label>
+                                    <input type="text" id="uid" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="referencia">Referencia</label>
+                                    <input type="text" id="referencia" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                <label for="">Variante</label>
+                                <select class="form-select" name="select">
+                                    <option value="">Elegir variante</option>
+                                    <option value="value1">Variante 1</option>
+                                    <option value="value2" selected>Variante 2</option>
+                                    <option value="value3">Variante 3</option>
+                                </select>
+                                </div>
+                            </div>
+                        
+                            </div>
+                    <div class="col-4">
+                                <h2 class="info">Información</h2>
+                                <!-- categoria -->
+                                <div class="form-group mb-3">
+                                    <label for="categoria">Categoria</label>
+                                    <select class="form-select" id="categoria" aria-label="Default select example">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <!-- subcategoria -->
+                                <div class="form-group mb-3">
+                                    <label for="subcategoria">Subcategoria</label>
+                                    <select class="form-select" id="subcategoria" aria-label="Default select example">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <!-- tags -->
+                                <select class="form-select" id="tags" aria-label="Default select example">
+                                    <option selected>Tags</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  
+
+                                <div class="form-group mb-3">
+                                    <input id="destacado" type="checkbox" class="check">
+                                    <label for="destacado">Destacado</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2 especificacion" style="height: 100px"></textarea>
+                                    <label for="floatingTextarea2">Comments</label>
+                                  </div>
+
+
+                     </div>
+                 </div>
+        <div class="modal-footer">
+          
+            <button type="button" id="cancelar" class="btn btn boton-luz2" data-bs-dismiss="modal">cancelar</button>
+            <button type="button" id="guardar" class="btn btn boton-luz1">guardar cambios</button>
+          <!-- <input type="submit" value="REGISTRAR" class="btn boton-luz1 btn-block"> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
+</section>
+
+
+<div class="table-header">
+    <table class="table ">
+        <tr>
+            <th scope="col"><img src="./recursos/app.svg" alt=""></th>
+            <th scope="col">ID</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">UID</th>
+            <th scope="col">Referencia</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Subcategoria</th>
+        </tr>
+    </table>
+</div>
+
+<div class="col-md-8" id="producto-list"></div>
+
+<div class="pestaña-cont">
+  <div class="cont-items">
+      <button class="btn_cant">-</button>
+      <p class="cant_text">2</p>
+      <button class="btn_cant">+</button>
+      <p class="text-cont">Entradas por pagina</p>
+  </div>
+  <div class="pagination_items">
+      <p class="pagination_text">Total 15 pestañas</p>
+      <button class="pestaña"><</button>
+      <button class="pestaña">1</button>
+      <button class="pestaña">2</button>
+      <button class="pestaña">3</button>
+      <button class="pestaña" disabled>...</button>
+      <button class="pestaña">6</button>
+      <button class="pestaña">7</button>
+      <button class="pestaña">8</button>
+      <button class="pestaña" disabled>...</button>
+      <button class="pestaña">10</button>
+      <button class="pestaña">></button>
+  </div>
+</div>
+
+</section>
+</div>
+</div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>   
+</body>
+</html>
